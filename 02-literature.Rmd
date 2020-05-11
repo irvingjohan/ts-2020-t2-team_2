@@ -1,0 +1,31 @@
+# Descripción de las tablas (#desc)
+
+En este capitulo, se muestra como las tablas de la base de datos estan compuestas
+
+ \@ref(desc). 
+
+Lo primero que se debe hacer es importar la base de datos a una variable en R. A continuacion se muestra el nombre de la tabla asi como su significado.
+ \@ref(tab:tabbla-descr).
+```{r tabbla-descr}
+x<-read.csv("base/DEFUN12.csv")
+cx<-colnames(x)
+cx
+rx<- matrix(c(cx), byrow = TRUE)
+descripcion<- matrix(c("Entidad de registro","Municipio de registro","Entidad de residencia habitual del (la) fallecido (a)","Municipio de residencia habitual del (la) fallecido (a)","Tamaño de localidad de residencia habitual del (la) fallecido (a)","Localidad de residencia habitual del (la) fallecido (a)","Entidad de ocurrencia","Municipio de ocurrencia","Tamaño de localidad de ocurrencia","Localidad de ocurrencia","Causa de la defunción (lista detallada)","Causa de la defunción (lista mexicana)","Sexo del (la) fallecido (a)","Edad del (la) fallecido (a)","Día de ocurrencia","Mes de ocurrencia","Anio_ocur Año de ocurrencia","Día de registro","Mes de registro","Año de registro","Día de nacimiento del (la) fallecido (a)","Mes de nacimiento del (la) fallecido (a)","Año de nacimiento del (la) fallecido (a)",
+"Ocupación del (la) fallecido (a)","Nivel de escolaridad del (la) fallecido (a)","Estado conyugal (civil) del (la) fallecido (a)","Tipo de defunción (presunto)","Ocurrió en el desempeño de su trabajo",
+"Sitio de ocurrencia de la lesión","Condición de necropsia","Condición de atención médica","Sitio de ocurrencia de la defunción","Persona que certificó la defunción","Nacionalidad del (la) fallecido (a)",
+"Afiliación a los servicios de salud (derechohabiencia) del (la) fallecido (a)","Condición de embarazo",
+"Causas relacionadas con el embarazo","Hora de la defunción","Minuto de la defunción","Causas detalladas CIE (capítulo)","Causas detalladas CIE (grupo)","Lista de tabulación 1 para mortalidad de la CIE","Lista mexicana de enfermedades (grupo)","Condición de violencia familiar","Área urbana-rural de ocurrencia","Edad_agru Edad (agrupada) del (la) fallecido (a)","Complicaron el embarazo","Día de certificación","Mes de certificación","Año de certificación","Defunciones maternas totales","Condición de habla lengua indígena del (la) fallecido (a)","Condición de actividad económica del (la) fallecido (a)","Parentesco del presunto agresor","Entidad de ocurrencia de la lesión","Municipio de ocurrencia de la lesión","Localidad de ocurrencia de la lesión","Distritos de registro de Oaxaca"),byrow = TRUE)
+rownames(descripcion) <- rx
+descripcion
+```
+Como puede apreciarse, en esta base de datos contamos con 57 columnas las cuales nos proporcionan informacion 
+ \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+

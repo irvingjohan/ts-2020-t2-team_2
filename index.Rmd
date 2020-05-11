@@ -1,0 +1,29 @@
+--- 
+title: "Mortalidad en el país entre los años 2012-2018"
+author: "Equipo 2 Tópicos Selectos de Ingeniería de Software"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "El documento presente consiste en el análisis de los datos presentes en la tasa de mortalidad en el país entre los años 2012 al 2018."
+---
+
+# Introducción
+
+El documento presente consiste en el análisis de los datos presentes en la tasa de mortalidad en el país entre los años 2012 al 2018.
+
+
+Para este proyecto, se presentarán una serie de análisis por segmento anual, partiendo del 2012 llegando hasta el 2018; cada sección tomará una parte de la información adquirida y presentará la revisión de un causante de la mortalidad en el país.
+
+To compile this example to PDF, you need to install XeLaTeX.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
